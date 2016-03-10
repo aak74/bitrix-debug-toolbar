@@ -1,0 +1,174 @@
+#scrollUp {
+    display: none !important;
+
+}
+
+.debug-toolbar-container {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0;
+	z-index: 1000000;
+    background: linear-gradient(to bottom, rgba(237,237,237,1) 0%,rgba(246,246,246,1) 53%,rgba(255,255,255,1) 100%);
+}
+
+.debug-info {
+    display: none;
+    font-size: 16px;
+    line-height: 20px;
+    overflow: auto;
+}
+
+.debug-info > div{
+    float: left;
+    /*height:100%;*/
+    padding: 5px;
+}
+
+.debug-info.open {
+    display: block;
+}
+
+.debug-list li {
+    padding: 4px;
+    cursor: pointer;
+}
+.debug-detail li.active > span,
+.debug-list li.active {
+    font-weight: 800;
+    color: red;
+}
+
+.debug-list {
+    width:23%;
+}
+
+.debug-detail {
+    width:75%;
+    border-left: 2px solid #e4e4e4;
+}
+
+.debug-detail li.object:before {
+    content: "-";
+    width:10px;
+    height: 10px;
+    border: 1px; 
+    margin-left: -10px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.debug-detail li.object > span {
+    cursor: pointer;
+}
+
+.debug-detail li.close.object:before {
+    content: "+";
+}
+
+.debug-detail li.close > ul {
+    display:none;
+}
+
+.debug-detail ul {
+    padding-left: 16px;
+}
+
+.debug-toolbar-max {
+    border-top: 1px solid #ccc;
+    min-height: 40px;
+}
+
+.debug-toolbar-before {
+    content: "";
+    height: 40px;
+    min-height: 40px;
+}
+
+.debug-toolbar-block {
+    float: left;
+    margin: 0;
+    border-right: 1px solid #e4e4e4;
+    padding: 4px 8px;
+    line-height: 32px;
+    white-space: nowrap;
+}
+
+.debug-toolbar .panel-info {
+    display: inline-block;
+    padding: 6px 4px;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 14px;
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    white-space: nowrap;
+    /*vertical-align: baseline;*/
+    margin-top: 3px;
+    background-color: #999999;
+}
+
+
+.debug-toolbar .panel-name {
+	float: left;
+    margin: 0;
+    border-right: 1px solid #e4e4e4;
+    padding: 0px 8px;
+    line-height: 32px;
+    white-space: nowrap;
+}
+
+.debug-toolbar .panel-info.label-info {
+    background-color: #3a87ad;
+}
+
+.debug-toolbar .panel-info.label-danger {
+    background-color: #a94442;
+}
+}
+
+.debug-toolbar .panel-info.label-warning {
+    color: #8a6d3b;
+}
+
+.debug-toolbar-toggler {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    bottom: 4px;
+    width: 15px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: 100;
+    line-height: 28px;
+    color: #ffffff;
+    text-align: center;
+    background: #666666;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+.debug-toolbar-toggler:hover, 
+.debug-toolbar-toggler:focus {
+    color: #ffffff;
+    text-decoration: none;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+}
+
+.debug-info.hidden,
+.debug-toolbar.hidden {
+	display: none;
+}
+
+.debug-toolbar .debug {
+    cursor: pointer;
+}
+
+.debug-toolbar-container .helper {
+	display: none;
+}
